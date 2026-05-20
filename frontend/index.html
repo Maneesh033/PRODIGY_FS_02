@@ -4,17 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Employee Management System</title>
-    <!-- Modern Font: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <!-- Icons (Phosphor Icons) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <!-- Toast Notification Container -->
     <div id="toast-container" class="toast-container"></div>
-
-    <!-- Login View (Visible by default) -->
     <main id="login-view" class="view login-view">
       <div class="glass-panel login-card">
         <div class="login-header">
@@ -44,8 +39,6 @@
         </form>
       </div>
     </main>
-
-    <!-- Dashboard View (Hidden by default) -->
     <main id="dashboard-view" class="view dashboard-view hidden">
       <aside class="sidebar glass-panel">
         <div class="sidebar-brand">
@@ -61,7 +54,6 @@
           <i class="ph ph-sign-out"></i> Logout
         </button>
       </aside>
-
       <div class="dashboard-content">
         <header class="dashboard-header glass-panel">
           <div>
@@ -78,7 +70,6 @@
             </button>
           </div>
         </header>
-
         <section class="data-section glass-panel">
           <div class="table-container">
             <table id="employees-table">
@@ -93,7 +84,6 @@
                 </tr>
               </thead>
               <tbody id="employees-tbody">
-                <!-- Data populated dynamically -->
               </tbody>
             </table>
           </div>
@@ -105,8 +95,6 @@
         </section>
       </div>
     </main>
-
-    <!-- Modal for Add/Edit -->
     <div id="employee-modal" class="modal-overlay hidden">
       <div class="modal glass-panel">
         <div class="modal-header">
@@ -115,7 +103,6 @@
         </div>
         <form id="employee-form" class="modal-body">
           <input type="hidden" id="emp-id" />
-          
           <div class="grid-2">
             <div class="form-group">
               <label for="emp-string-id">Employee ID</label>
@@ -158,7 +145,6 @@
               <input type="date" id="emp-join" required />
             </div>
           </div>
-          
           <div class="modal-footer">
             <button type="button" id="cancel-modal-btn" class="btn-secondary">Cancel</button>
             <button type="submit" class="btn-primary">Save Employee</button>
@@ -166,8 +152,6 @@
         </form>
       </div>
     </div>
-
-    <!-- Modal for Delete Confirmation -->
     <div id="delete-modal" class="modal-overlay hidden">
       <div class="modal delete-modal glass-panel">
         <i class="ph ph-warning-circle warning-icon"></i>
@@ -179,7 +163,6 @@
         </div>
       </div>
     </div>
-
     <script type="module" src="/main.js"></script>
   </body>
 </html>
